@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Doll Selection</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+
+</head>
+<body>
+	
+	<div class="mo-form-wrapper">
+		
+		<div class="stage" id="stage1">
+			<div class="mo-product-carousel">
+			    <section class="container" id="demos">
+			      <div class="row">
+			   		<div class="Mo-Carousel-Wrapper">
+						<h3>Stage One</h3>
+			          <div class="owl-carousel owl-theme" id="MoProductsChoose">
+			            <div class="item">
+			              <img src="img/doll (1).jpg">
+			            </div>
+			            <div class="item">
+			              <img src="img/doll (2).jpg">
+			            </div>
+			            <div class="item">
+			              <img src="img/doll (5).jpg">
+			            </div>
+			            <div class="item">
+			              <img src="img/doll (1).png">
+			            </div>
+			            <div class="item">
+			              <img src="img/doll (2).png">
+			            </div>
+			            <div class="item">
+			              <img src="img/doll (3).png">
+			            </div>
+			          </div>       			
+			   		</div>       
+			      </div>
+			    </section>				
+			</div>
+		</div><!-- Stage 1 -->
+
+		<div class="stage">
+			<h3 style="text-align:center;padding-bottom: 20px;">Stage Two</h3>
+			<div class="container">
+				<div class="row">
+					<div class="Mo-choose-heart">
+						<div class="mo-regular-heart" onclick="choose(this)">
+							<div class="heart-img">
+								<img src="img/teding.png">
+							</div>
+							<div class="doll-price">
+								<em>Regular Heart</em>
+								<span><b>Price: </b>$150</span>
+							</div>
+						</div>
+						<div class="mo-upgrade-heart" onclick="choose(this)">
+							<div class="heart-img">
+								<img src="img/dubido-animation-transparent.gif">
+							</div>
+							<div class="doll-price">
+								<em>Upgraded Heart</em>
+								<span><b>Price: </b>$250</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Stage 2 -->
+
+		<div class="stage">
+			<h3 style="text-align:center;padding-bottom: 20px;">Stage Three</h3>
+		</div><!-- Stage 3 -->
+
+		<div class="stage">
+			<h3 style="text-align:center;padding-bottom: 20px;">Stage Four</h3>
+		</div><!-- Stage 4 -->
+
+
+	</div>
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+
+
+          <script>
+          function choose(el){
+          	$('.mo-regular-heart,.mo-upgrade-heart').each(function() {
+	          	if ($(this).hasClass('selected')){
+	          		$(this).removeClass('selected');
+	          	}          		
+          	});
+
+          	$(el).addClass('selected');
+          }
+            $(document).ready(function() {
+            	$('.mo-regular-heart').click(function() {
+            		// $(this).addClass('chosen');
+            	});
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                autoplay: true,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 3
+                  },
+                  1000: {
+                    items: 5
+                  }
+                }
+              })
+            });
+$(document).ready(function() {
+
+    initStages();
+
+});
+
+function initStages() {
+
+    var navBtns = '<div class="container"><div class="row"><button class="back">Back</button><button class="next">Next</button></div></div>';
+    $(".stage").hide().append(navBtns);
+    $(".stage:first .back").hide();
+    $(".stage:last .next").hide();
+    $(".stage:first").show();
+    
+    $(".next").click(function(){
+        var index = $(this).closest(".stage").hide().index();
+        index++;
+        $($(".stage")[index]).show();
+    });
+    
+    $(".back").click(function(){
+        var index = $(this).closest(".stage").hide().index();
+        index--;
+        $($(".stage")[index]).show();
+    });
+}            
+          </script>
+
+</body>
+</html>

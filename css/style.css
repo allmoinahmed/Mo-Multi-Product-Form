@@ -1,0 +1,101 @@
+body {
+	padding: 0% 0 20% 0
+}
+#MoProductsChoose .item {
+	width: 100%;
+	text-align: center;
+	border: 02px #333 solid;
+	cursor: pointer;
+}
+#MoProductsChoose .item img {
+	width: 100%;
+	height: auto;
+}
+.Mo-Carousel-Wrapper {
+    width: 100%;
+    float: left;
+    margin-top: 13%;
+}
+.stage {
+	display: none;
+	min-height: 540px;
+	float: left;
+	width:100%;
+}
+#stage1 {
+	display: block;
+}
+.stage h3 {
+	text-align:center;
+	padding-bottom: 20px;
+	padding-top: 10%;
+}
+.Mo-choose-heart {
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+}
+.Mo-choose-heart .mo-regular-heart {
+    width: 45%;
+    float: left;
+    text-align: center;
+    border: 4px #000 solid;
+    padding: 5%;
+    cursor: pointer;
+}
+
+.Mo-choose-heart .mo-regular-heart img,.Mo-choose-heart .mo-upgrade-heart img {
+    width: auto;
+    height: 350px;
+}
+
+.Mo-choose-heart .mo-upgrade-heart {
+    width: 45%;
+    float: right;
+    text-align: center;
+    border: 4px #000 solid;
+    padding: 5%;
+    cursor: pointer;
+}
+.mo-regular-heart.selected .heart-img:before ,.mo-upgrade-heart.selected .heart-img:before  {
+	display: block;
+    content: 'Selected';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0000009e;
+    color: #fff;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    font-family: lato;
+    font-weight: 700;
+    vertical-align: middle;
+    padding-top: 40%;
+}
+.doll-price {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.heart-img {
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+.doll-price span {
+    font-size: 30px;
+    font-family: lato;
+    font-weight: 600;
+}
+.doll-price em {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
